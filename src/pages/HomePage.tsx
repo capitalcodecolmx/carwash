@@ -1,81 +1,113 @@
-import { useNavigate } from 'react-router-dom';
-import { HeroSection } from '@/components/Hero/HeroSection';
-import { ServiceCard } from '@/components/Services/ServiceCard';
-import { TestimonialCard } from '@/components/Testimonials/TestimonialCard';
-import { ServiceComparisonSection } from '@/components/ServiceComparisonSection';
+import { useNavigate } from "react-router-dom";
 
 export function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <>
-      <HeroSection />
-      
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6">
+              Expert Car Detailing From Luxury Brands To Your Everyday Ride In
+              Sydney
+            </h1>
+            <div className="grid grid-cols-2 gap-4 mb-12">
+              <img
+                src="https://images.unsplash.com/photo-1600320844644-0e144d76f5ae"
+                alt="Car Detailing"
+                className="rounded-lg"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f"
+                alt="Car Cleaning"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Descubre nuestra gama completa de servicios de lavado y detallado
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <ServiceCard 
-              image="https://images.unsplash.com/photo-1600320844644-0e144d76f5ae"
-              title="Lavado Manual DIY"
-              description="Estaciones de autoservicio equipadas con herramientas profesionales."
-              onDetailsClick={() => navigate("/services")}
-            />
-            <ServiceCard 
-              image="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f"
-              title="Lavado Premium"
-              description="Servicio completo con atención al detalle y productos premium."
-              isPopular={true}
-              onDetailsClick={() => navigate("/services")}
-            />
-            <ServiceCard 
-              image="https://images.unsplash.com/photo-1516974486242-3fdb2c5c7003"
-              title="Detallado Profesional"
-              description="Tratamiento completo interior y exterior para su vehículo."
-              onDetailsClick={() => navigate("/services")}
-            />
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">Services we provide</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-2">Ceramic Coating</h3>
+              <p className="text-gray-600">
+                Professional ceramic coating services
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-2">Wheel Protection</h3>
+              <p className="text-gray-600">
+                Complete wheel care and protection
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-2">Paint Correction</h3>
+              <p className="text-gray-600">Expert paint correction services</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-2">Interior Detailing</h3>
+              <p className="text-gray-600">Complete interior restoration</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-gray-50 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
-            Lo que dicen nuestros clientes
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Experiencias reales de clientes satisfechos
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <TestimonialCard 
-              content="El mejor servicio de lavado que he encontrado. El personal es muy profesional y cuidadoso."
-              author="Carlos Méndez"
-              role="Cliente frecuente"
-            />
-            <TestimonialCard 
-              content="Increíble atención al detalle. Mi auto quedó como nuevo."
-              author="Ana García"
-              role="Cliente verificado"
-            />
-            <TestimonialCard 
-              content="Excelente relación calidad-precio. Definitivamente volveré."
-              author="Roberto Sánchez"
-              role="Cliente nuevo"
-            />
+      {/* Packages Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">Choose your Package</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-4">Basic Wash</h3>
+              <ul className="space-y-2 mb-6">
+                <li>✓ Exterior Wash</li>
+                <li>✓ Wheel Cleaning</li>
+                <li>✓ Windows Cleaning</li>
+              </ul>
+              <button
+                onClick={() => navigate("/book")}
+                className="w-full bg-red-600 text-white px-6 py-3 rounded-lg"
+              >
+                Select Package
+              </button>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-4">Premium Wash</h3>
+              <ul className="space-y-2 mb-6">
+                <li>✓ All Basic Features</li>
+                <li>✓ Interior Vacuum</li>
+                <li>✓ Wax Protection</li>
+              </ul>
+              <button
+                onClick={() => navigate("/book")}
+                className="w-full bg-red-600 text-white px-6 py-3 rounded-lg"
+              >
+                Select Package
+              </button>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-bold mb-4">Ultimate Detail</h3>
+              <ul className="space-y-2 mb-6">
+                <li>✓ All Premium Features</li>
+                <li>✓ Paint Correction</li>
+                <li>✓ Ceramic Coating</li>
+              </ul>
+              <button
+                onClick={() => navigate("/book")}
+                className="w-full bg-red-600 text-white px-6 py-3 rounded-lg"
+              >
+                Select Package
+              </button>
+            </div>
           </div>
         </div>
       </section>
-
-      <ServiceComparisonSection />
-    </>
+    </div>
   );
 }

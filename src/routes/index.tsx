@@ -1,12 +1,14 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { RootLayout } from '@/layouts/RootLayout';
-import { HomePage } from '@/pages/HomePage';
-import { ServicesPage } from '@/pages/ServicesPage';
-import { ContactPage } from '@/pages/ContactPage';
+import { createBrowserRouter } from "react-router-dom";
+import { RootLayout } from "@/layouts/RootLayout";
+import { HomePage } from "@/pages/HomePage";
+import { ServicesPage } from "@/pages/ServicesPage";
+import { ContactPage } from "@/pages/ContactPage";
+import { AboutPage } from "@/pages/AboutPage";
+import { BookingPage } from "@/pages/BookingPage";
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <RootLayout />,
     children: [
       {
@@ -14,12 +16,20 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'services',
+        path: "services",
         element: <ServicesPage />,
       },
       {
-        path: 'contact',
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "book",
+        element: <BookingPage />,
       },
     ],
   },
