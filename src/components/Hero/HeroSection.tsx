@@ -113,7 +113,7 @@ export function HeroSection() {
             {/* Info Boxes - Completely redesigned for mobile */}
             <div className="absolute bottom-3 xs:bottom-4 sm:bottom-4 md:bottom-6 left-3 xs:left-4 sm:left-4 md:left-6 right-3 xs:right-4 sm:right-4 md:right-6 z-20 flex flex-col sm:flex-row gap-2 xs:gap-3 sm:gap-4">
               {/* Left Box - Mobile optimized */}
-              <div className="bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-2 sm:order-1 border-l-2 border-red-600">
+              <div className="hidden sm:block bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-2 sm:order-1 border-l-2 border-red-600">
                 <h3 className="font-bold text-sm xs:text-sm sm:text-base leading-tight">
                   Nuestros Clientes son la parte más importante de nuestro negocio
                 </h3>
@@ -139,8 +139,65 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Right Box - Mobile optimized */}
-              <div className="bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-3 border-l-2 border-red-600">
+              {/* Mobile Box - Single box for mobile */}
+              <div className="sm:hidden bg-white p-4 rounded-lg shadow-lg w-full border-l-2 border-red-600">
+                <div className="flex flex-col">
+                  <div className="mb-3">
+                    <button
+                      onClick={() => navigate("/sobre-nosotros")}
+                      className="text-sm font-medium flex items-center text-red-600 hover:text-red-700 transition-colors"
+                    >
+                      <span>Leer Más</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-3 w-3 ml-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <p className="text-sm leading-tight mb-2">
+                    Nuestros profesionales proporcionan un detallado completo, interior y limpieza profunda
+                  </p>
+                  <div className="mt-1">
+                    <div className="text-xs text-gray-500 mb-1">
+                      100% clientes satisfechos
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-2xl font-bold text-red-600">
+                        4.6
+                      </span>
+                      <div className="ml-2">
+                        <div className="flex text-yellow-400">
+                          {[...Array(5)].map((_, i) => (
+                            <svg
+                              key={i}
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-3 w-3"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          8,520 reseñas
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Box - Desktop only */}
+              <div className="hidden sm:block bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-3 border-l-2 border-red-600">
                 <p className="text-xs xs:text-xs leading-tight mb-2 xs:mb-2">
                   Nuestros profesionales proporcionan un detallado completo, interior y limpieza profunda
                 </p>
