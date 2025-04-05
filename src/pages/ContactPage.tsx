@@ -25,7 +25,7 @@ export function ContactPage() {
 
   // Contact information data
   const contactInfo = {
-    address: "Calle Principal 123, Madrid, España",
+    address: "Puerta del Sol, 28013 Madrid, España",
     phone: "+34 91 234 5678",
     email: "info@pristineedge.es",
     hours: {
