@@ -7,57 +7,57 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-white shadow-sm">
-      <div className="container mx-auto px-4 sm:px-8 py-3 flex justify-between items-center">
+      <div className="custom-container py-1 xs:py-1.5 sm:py-2 flex justify-between items-center">
         <div
           className="flex-shrink-0 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <span className="text-2xl font-bold">CAR DETAIL</span>
+          <span className="text-lg xs:text-xl sm:text-2xl font-bold">DETALLADO AUTO</span>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-4 lg:space-x-8">
           <button
             onClick={() => navigate("/")}
-            className="font-medium text-black hover:text-red-600 transition-colors"
+            className="text-sm lg:text-base font-medium text-black hover:text-red-600 transition-colors"
           >
-            Home
+            Inicio
           </button>
           <button
-            onClick={() => navigate("/services")}
-            className="font-medium text-black hover:text-red-600 transition-colors"
+            onClick={() => navigate("/servicios")}
+            className="text-sm lg:text-base font-medium text-black hover:text-red-600 transition-colors"
           >
-            Services
+            Servicios
           </button>
           <button
-            onClick={() => navigate("/about")}
-            className="font-medium text-black hover:text-red-600 transition-colors"
+            onClick={() => navigate("/sobre-nosotros")}
+            className="text-sm lg:text-base font-medium text-black hover:text-red-600 transition-colors"
           >
-            About
+            Nosotros
           </button>
           <button
-            onClick={() => navigate("/contact")}
-            className="font-medium text-black hover:text-red-600 transition-colors"
+            onClick={() => navigate("/contacto")}
+            className="text-sm lg:text-base font-medium text-black hover:text-red-600 transition-colors"
           >
-            Contact
+            Contacto
           </button>
         </div>
 
         {/* Book Now Button */}
         <button
-          onClick={() => navigate("/book")}
-          className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-full font-medium hover:bg-red-700 transition-colors"
+          onClick={() => navigate("/reservar")}
+          className="hidden md:block bg-red-600 text-white px-4 lg:px-6 py-1.5 lg:py-2 rounded-full text-sm lg:text-base font-medium hover:bg-red-700 transition-colors"
         >
-          Book Now
+          Reservar Cita
         </button>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-1.5 xs:p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5 xs:w-6 xs:h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -82,37 +82,52 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
-            <div className="flex flex-col p-4 space-y-4">
+          <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden z-50">
+            <div className="flex flex-col p-3 xs:p-4 space-y-3 xs:space-y-4">
               <button
-                onClick={() => navigate("/")}
-                className="font-medium text-black hover:text-red-600 transition-colors"
+                onClick={() => {
+                  navigate("/");
+                  setIsMenuOpen(false);
+                }}
+                className="text-sm xs:text-base font-medium text-black hover:text-red-600 transition-colors"
               >
-                Home
+                Inicio
               </button>
               <button
-                onClick={() => navigate("/services")}
-                className="font-medium text-black hover:text-red-600 transition-colors"
+                onClick={() => {
+                  navigate("/servicios");
+                  setIsMenuOpen(false);
+                }}
+                className="text-sm xs:text-base font-medium text-black hover:text-red-600 transition-colors"
               >
-                Services
+                Servicios
               </button>
               <button
-                onClick={() => navigate("/about")}
-                className="font-medium text-black hover:text-red-600 transition-colors"
+                onClick={() => {
+                  navigate("/sobre-nosotros");
+                  setIsMenuOpen(false);
+                }}
+                className="text-sm xs:text-base font-medium text-black hover:text-red-600 transition-colors"
               >
-                About
+                Nosotros
               </button>
               <button
-                onClick={() => navigate("/contact")}
-                className="font-medium text-black hover:text-red-600 transition-colors"
+                onClick={() => {
+                  navigate("/contacto");
+                  setIsMenuOpen(false);
+                }}
+                className="text-sm xs:text-base font-medium text-black hover:text-red-600 transition-colors"
               >
-                Contact
+                Contacto
               </button>
               <button
-                onClick={() => navigate("/book")}
-                className="bg-red-600 text-white px-6 py-2 rounded-full font-medium hover:bg-red-700 transition-colors"
+                onClick={() => {
+                  navigate("/reservar");
+                  setIsMenuOpen(false);
+                }}
+                className="bg-red-600 text-white px-4 xs:px-6 py-1.5 xs:py-2 rounded-full text-sm xs:text-base font-medium hover:bg-red-700 transition-colors"
               >
-                Book Now
+                Reservar Cita
               </button>
             </div>
           </div>

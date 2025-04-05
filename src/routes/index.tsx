@@ -15,6 +15,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      // English routes
       {
         path: "services",
         element: <ServicesPage />,
@@ -29,6 +30,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "book",
+        element: <BookingPage />,
+      },
+      // Spanish routes
+      {
+        path: "servicios",
+        element: <ServicesPage />,
+      },
+      {
+        path: "sobre-nosotros",
+        element: <AboutPage />,
+      },
+      {
+        path: "contacto",
+        element: <ContactPage />,
+      },
+      {
+        path: "reservar",
         element: <BookingPage />,
       },
     ],

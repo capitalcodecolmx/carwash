@@ -48,9 +48,9 @@ export function ServiceComparisonSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-10 bg-white">
+      <div className="custom-container">
+        <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-black mb-4">COMPARACIÓN DE SERVICIOS</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Encuentra el servicio perfecto para tu vehículo
