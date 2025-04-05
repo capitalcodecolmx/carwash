@@ -4,17 +4,17 @@ export function HeroSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative bg-white pt-4 my-4">
+    <section className="relative bg-white pt-3 xs:pt-4 my-3 xs:my-4">
       {/* Book a car wash button */}
       <div className="custom-container">
         <button
           onClick={() => navigate("/reservar")}
-          className="flex items-center bg-red-600 text-white px-3 sm:px-4 py-2 rounded-full w-fit mb-4 hover:bg-red-700 transition-colors"
+          className="flex items-center bg-red-600 text-white px-3 sm:px-4 py-1.5 xs:py-2 rounded-full w-fit mb-3 xs:mb-4 hover:bg-red-700 transition-colors shadow-sm"
         >
-          <div className="bg-white p-1 rounded-full mr-2 flex-shrink-0">
+          <div className="bg-white p-1 rounded-full mr-1.5 xs:mr-2 flex-shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 sm:h-5 sm:w-5 text-red-600"
+              className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-red-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -22,7 +22,7 @@ export function HeroSection() {
               <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h5.05a2.5 2.5 0 014.9 0H20a1 1 0 001-1V5a1 1 0 00-1-1H3z" />
             </svg>
           </div>
-          <span className="text-xs sm:text-sm font-medium leading-tight">
+          <span className="text-[10px] xs:text-xs sm:text-sm font-medium leading-tight">
             Reserva un lavado de auto con el especialista más grande de España
           </span>
         </button>
@@ -43,17 +43,35 @@ export function HeroSection() {
               <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 {/* Mobile tags (fewer tags, different positions) */}
                 <div className="sm:hidden">
-                  <div className="absolute top-[5%] left-[5%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm">
-                    Lavado
+                  <div className="absolute top-[5%] left-[5%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm font-medium">
+                    <span className="flex items-center">
+                      <span className="h-1.5 w-1.5 bg-red-600 rounded-full mr-1"></span>
+                      Lavado
+                    </span>
                   </div>
-                  <div className="absolute top-[5%] right-[5%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm">
-                    Detallado
+                  <div className="absolute top-[5%] right-[5%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm font-medium">
+                    <span className="flex items-center">
+                      <span className="h-1.5 w-1.5 bg-red-600 rounded-full mr-1"></span>
+                      Detallado
+                    </span>
                   </div>
-                  <div className="absolute bottom-[10%] left-[10%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm">
-                    Pulido
+                  <div className="absolute bottom-[10%] left-[10%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm font-medium">
+                    <span className="flex items-center">
+                      <span className="h-1.5 w-1.5 bg-red-600 rounded-full mr-1"></span>
+                      Pulido
+                    </span>
                   </div>
-                  <div className="absolute bottom-[10%] right-[10%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm">
-                    Brillo
+                  <div className="absolute bottom-[10%] right-[10%] bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm font-medium">
+                    <span className="flex items-center">
+                      <span className="h-1.5 w-1.5 bg-red-600 rounded-full mr-1"></span>
+                      Brillo
+                    </span>
+                  </div>
+                  <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 bg-white text-[10px] px-1.5 py-0.5 rounded-md shadow-sm font-medium">
+                    <span className="flex items-center">
+                      <span className="h-1.5 w-1.5 bg-red-600 rounded-full mr-1"></span>
+                      Cerámica
+                    </span>
                   </div>
                 </div>
 
@@ -83,31 +101,31 @@ export function HeroSection() {
           </div>
 
           {/* Car Image with Overlay */}
-          <div className="relative mt-2 sm:mt-4 rounded-xl sm:rounded-3xl overflow-hidden">
+          <div className="relative mt-2 xs:mt-3 sm:mt-4 rounded-xl sm:rounded-3xl overflow-hidden shadow-md">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-transparent to-red-400/30 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=500&q=80"
               alt="Detallado de Autos"
-              className="w-full h-48 xs:h-56 sm:h-64 md:h-80 lg:h-96 object-cover rounded-xl sm:rounded-3xl"
+              className="w-full h-44 xs:h-56 sm:h-64 md:h-80 lg:h-96 object-cover rounded-xl sm:rounded-3xl"
             />
 
             {/* Info Boxes - Responsive layout */}
-            <div className="absolute bottom-2 xs:bottom-3 sm:bottom-4 md:bottom-6 left-2 xs:left-3 sm:left-4 md:left-6 right-2 xs:right-3 sm:right-4 md:right-6 z-20 flex flex-col sm:flex-row gap-2 xs:gap-3 sm:gap-4">
-              {/* Left Box */}
-              <div className="bg-white p-2 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-2 sm:order-1">
-                <h3 className="font-bold text-xs xs:text-sm sm:text-base leading-tight">
-                  Nuestros Clientes son la parte más importante de nuestro
-                  negocio
+            {/* Info Boxes - Completely redesigned for mobile */}
+            <div className="absolute bottom-3 xs:bottom-4 sm:bottom-4 md:bottom-6 left-3 xs:left-4 sm:left-4 md:left-6 right-3 xs:right-4 sm:right-4 md:right-6 z-20 flex flex-col sm:flex-row gap-2 xs:gap-3 sm:gap-4">
+              {/* Left Box - Mobile optimized */}
+              <div className="bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-2 sm:order-1 border-l-2 border-red-600">
+                <h3 className="font-bold text-sm xs:text-sm sm:text-base leading-tight">
+                  Nuestros Clientes son la parte más importante de nuestro negocio
                 </h3>
-                <div className="flex items-center mt-1 xs:mt-2 sm:mt-3">
+                <div className="flex items-center mt-2 xs:mt-2 sm:mt-3">
                   <button
                     onClick={() => navigate("/sobre-nosotros")}
-                    className="text-xs xs:text-sm font-medium flex items-center hover:text-red-600 transition-colors"
+                    className="text-xs xs:text-sm font-medium flex items-center text-red-600 hover:text-red-700 transition-colors"
                   >
                     <span>Leer Más</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-3 w-3 xs:h-4 xs:w-4 ml-1"
+                      className="h-3 w-3 xs:h-4 xs:w-4 ml-1 xs:ml-1"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -121,27 +139,26 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Right Box */}
-              <div className="bg-white p-2 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-3">
-                <p className="text-[10px] xs:text-xs leading-tight mb-1 xs:mb-2">
-                  Nuestros profesionales proporcionan un detallado completo,
-                  interior y limpieza profunda
+              {/* Right Box - Mobile optimized */}
+              <div className="bg-white p-3 xs:p-3 sm:p-4 rounded-lg xs:rounded-xl shadow-lg sm:w-1/3 order-3 border-l-2 border-red-600">
+                <p className="text-xs xs:text-xs leading-tight mb-2 xs:mb-2">
+                  Nuestros profesionales proporcionan un detallado completo, interior y limpieza profunda
                 </p>
                 <div className="mt-1 xs:mt-2">
-                  <div className="text-[10px] xs:text-xs text-gray-500 mb-0.5 xs:mb-1">
+                  <div className="text-xs xs:text-xs text-gray-500 mb-1 xs:mb-1">
                     100% clientes satisfechos
                   </div>
                   <div className="flex items-center">
-                    <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold">
+                    <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-red-600">
                       4.6
                     </span>
-                    <div className="ml-1 xs:ml-2">
+                    <div className="ml-2 xs:ml-2">
                       <div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-2 w-2 xs:h-3 xs:w-3 sm:h-4 sm:w-4"
+                            className="h-3 w-3 xs:h-3 xs:w-3 sm:h-4 sm:w-4"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                           >
@@ -149,7 +166,7 @@ export function HeroSection() {
                           </svg>
                         ))}
                       </div>
-                      <div className="text-[10px] xs:text-xs text-gray-500">
+                      <div className="text-xs xs:text-xs text-gray-500">
                         8,520 reseñas
                       </div>
                     </div>
@@ -160,18 +177,24 @@ export function HeroSection() {
           </div>
 
           {/* Service Buttons */}
-          <div className="mt-4 xs:mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6">
+          <div className="mt-4 xs:mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center items-center gap-3 xs:gap-3 sm:gap-6">
             <button
               onClick={() => navigate("/reservar")}
-              className="bg-red-600 text-white px-6 py-2.5 text-sm rounded-full font-medium hover:bg-red-700 transition-colors w-full sm:w-[180px] md:w-[200px]"
+              className="bg-red-600 text-white px-6 xs:px-6 py-3 xs:py-2.5 text-sm xs:text-sm rounded-full font-medium hover:bg-red-700 transition-colors w-full sm:w-[180px] md:w-[200px] shadow-md flex items-center justify-center gap-2"
             >
-              Reservar Cita
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 xs:h-4 xs:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>Reservar Cita</span>
             </button>
             <button
               onClick={() => navigate("/servicios")}
-              className="border border-red-600 text-red-600 px-6 py-2.5 text-sm rounded-full font-medium hover:bg-red-600 hover:text-white transition-colors w-full sm:w-[180px] md:w-[200px]"
+              className="border border-red-600 text-red-600 px-6 xs:px-6 py-3 xs:py-2.5 text-sm xs:text-sm rounded-full font-medium hover:bg-red-600 hover:text-white transition-colors w-full sm:w-[180px] md:w-[200px] flex items-center justify-center gap-2"
             >
-              Ver Servicios
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 xs:h-4 xs:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Ver Servicios</span>
             </button>
           </div>
         </div>
