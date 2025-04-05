@@ -11,20 +11,30 @@ export function AboutPage() {
       {/* Hero Section */}
       <AboutHeroSection />
 
-      {/* Story Section */}
-      <AboutStorySection />
+      {/* Story Section - with negative margin for better spacing */}
+      <div className="mt-6 sm:mt-8 md:mt-10">
+        <AboutStorySection />
+      </div>
 
-      {/* Statistics Section */}
-      <AboutStatisticsSection />
+      {/* Statistics Section - with custom spacing */}
+      <div className="mt-0 sm:mt-2">
+        <AboutStatisticsSection />
+      </div>
 
-      {/* Values Section */}
-      <AboutValuesSection />
+      {/* Values Section - with custom spacing */}
+      <div className="mt-0">
+        <AboutValuesSection />
+      </div>
 
-      {/* Team Section */}
-      <AboutTeamSection />
+      {/* Team Section - with custom spacing */}
+      <div className="mt-6 sm:mt-8">
+        <AboutTeamSection />
+      </div>
 
-      {/* CTA Section */}
-      <AboutCTASection />
+      {/* CTA Section - with custom spacing */}
+      <div className="mt-8 sm:mt-12 mb-8 sm:mb-12">
+        <AboutCTASection />
+      </div>
     </div>
   );
 }
