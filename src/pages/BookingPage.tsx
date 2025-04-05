@@ -11,10 +11,10 @@ export function BookingPage() {
       <section className="relative bg-gray-900 text-white py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-            Book Your Service
+            Reserva Tu Servicio
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
-            Schedule your car detailing service today
+            Programa tu servicio de detallado de auto hoy
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export function BookingPage() {
             <form className="space-y-8">
               <div>
                 <label className="block text-lg font-medium mb-4">
-                  Select Your Package
+                  Selecciona Tu Paquete
                 </label>
                 <div className="grid grid-cols-1 gap-4">
                   <button
@@ -37,9 +37,9 @@ export function BookingPage() {
                         : "border-gray-200"
                     }`}
                   >
-                    <h3 className="text-xl font-bold mb-2">Basic Wash</h3>
+                    <h3 className="text-xl font-bold mb-2">Lavado Básico</h3>
                     <p className="text-gray-600">
-                      Exterior wash, wheel cleaning, windows
+                      Lavado exterior, limpieza de ruedas, ventanas
                     </p>
                   </button>
 
@@ -52,9 +52,9 @@ export function BookingPage() {
                         : "border-gray-200"
                     }`}
                   >
-                    <h3 className="text-xl font-bold mb-2">Premium Wash</h3>
+                    <h3 className="text-xl font-bold mb-2">Lavado Premium</h3>
                     <p className="text-gray-600">
-                      All basic features + interior vacuum, wax protection
+                      Todas las características básicas + aspirado interior, protección de cera
                     </p>
                   </button>
 
@@ -67,9 +67,9 @@ export function BookingPage() {
                         : "border-gray-200"
                     }`}
                   >
-                    <h3 className="text-xl font-bold mb-2">Ultimate Detail</h3>
+                    <h3 className="text-xl font-bold mb-2">Detallado Completo</h3>
                     <p className="text-gray-600">
-                      All premium features + paint correction, ceramic coating
+                      Todas las características premium + corrección de pintura, recubrimiento cerámico
                     </p>
                   </button>
                 </div>
@@ -78,40 +78,40 @@ export function BookingPage() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Full Name
+                    Nombre Completo
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 border rounded-lg"
-                    placeholder="Enter your full name"
+                    placeholder="Ingresa tu nombre completo"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Email
+                    Correo Electrónico
                   </label>
                   <input
                     type="email"
                     className="w-full px-4 py-2 border rounded-lg"
-                    placeholder="Enter your email"
+                    placeholder="Ingresa tu correo electrónico"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Phone Number
+                    Número de Teléfono
                   </label>
                   <input
                     type="tel"
                     className="w-full px-4 py-2 border rounded-lg"
-                    placeholder="Enter your phone number"
+                    placeholder="Ingresa tu número de teléfono"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Preferred Date
+                    Fecha Preferida
                   </label>
                   <input
                     type="date"
@@ -124,7 +124,7 @@ export function BookingPage() {
                 type="submit"
                 className="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
               >
-                Book Now
+                Reservar Ahora
               </button>
             </form>
           </div>
