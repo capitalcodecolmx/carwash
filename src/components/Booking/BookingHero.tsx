@@ -1,7 +1,4 @@
-import { useNavigate } from "react-router-dom";
-
 export function BookingHero() {
-  const navigate = useNavigate();
 
   return (
     <section className="relative bg-gradient-to-r from-red-600 to-red-500 text-white overflow-hidden">
